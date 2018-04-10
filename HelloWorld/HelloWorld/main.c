@@ -12,7 +12,7 @@ int main(void)
 	{
 		PORTA = ~(1<<PA3);      // turning on led 0 (active low)
 		_delay_ms(500);
-		PORTA = 0xff;			// turning on led 1 (active high)
+		PORTA |= (1<<PA3);			// turning on led 1 (active high)
 		_delay_ms(500);
 	}
 	return 1;
